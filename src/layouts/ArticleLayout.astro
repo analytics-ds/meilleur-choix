@@ -2,7 +2,7 @@
 import BaseLayout from './BaseLayout.astro';
 import Breadcrumb from '@/components/Breadcrumb.astro';
 import FAQ from '@/components/FAQ.astro';
-import { getLang, t, formatDate, getBlogPath, getCategorySlug, getCategoryPath, getCategoryName } from '@/utils/i18n';
+import { getLang, t, formatDate, getBlogPath, getCategorySlug, getCategoryPath, getCategoryName, getHomePath } from '@/utils/i18n';
 import { authors } from '@/data/authors';
 import type { CollectionEntry } from 'astro:content';
 
@@ -20,7 +20,7 @@ const authorRole = authorData ? authorData.role[lang] : '';
 
 const categorySlug = getCategorySlug(category);
 const breadcrumbs = [
-  { name: t(lang, 'breadcrumb.home'), url: lang === 'en' ? '/en/' : '/' },
+  { name: t(lang, 'breadcrumb.home'), url: getHomePath(lang) },
   { name: t(lang, 'breadcrumb.blog'), url: getBlogPath(lang) },
   { name: title, url: Astro.url.pathname },
 ];
