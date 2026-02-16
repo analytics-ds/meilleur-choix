@@ -1,0 +1,115 @@
+# ============================================================
+# CONFIGURATION DU SITE — À remplir avant de lancer la création
+# ============================================================
+
+# Marque / Brand
+brand:
+  name: ""                          # Nom de la marque en minuscules (ex: "datashake")
+  site_name: ""                     # Nom affiché du site (ex: "AI datashake")
+  domain: ""                        # Domaine du site (ex: "ai.datashake.fr")
+  parent_url: ""                    # URL du site principal (ex: "https://www.datashake.fr")
+  tagline_fr: ""                    # Slogan FR (ex: "Le blog GEO & IA pour les marketeurs")
+  tagline_en: ""                    # Slogan EN (ex: "The GEO & AI blog for marketers")
+  founding_year: ""                 # Année de fondation (ex: "2018")
+  address:
+    street: ""                      # (ex: "2 rue de Choiseul")
+    city: ""                        # (ex: "Paris")
+    postal_code: ""                 # (ex: "75002")
+    country: "FR"
+  linkedin_url: ""                  # URL LinkedIn entreprise
+  employee_range: ""                # (ex: "10-50")
+  expertise: []                     # Liste des domaines d'expertise
+  # Exemple :
+  # expertise:
+  #   - "SEO"
+  #   - "GEO"
+  #   - "Data"
+  #   - "Intelligence Artificielle"
+
+# Arguments commerciaux (utilisés dans les articles ranking)
+selling_points:
+  certification: ""                 # (ex: "Google Partner Premier, top 3% mondial pour la 4ème année consécutive")
+  clients_count: ""                 # (ex: "500+ entreprises accompagnées")
+  key_clients: []                   # Clients références
+  # Exemple :
+  # key_clients:
+  #   - "Ledger"
+  #   - "M. Moustache (Odaje)"
+  #   - "Maison Labiche"
+  #   - "Goossens Paris (Groupe Chanel)"
+  differentiators: []               # Points différenciants
+  # Exemple :
+  # differentiators:
+  #   - "Approche data-driven unique"
+  #   - "Expertise GEO pionnière en France"
+
+# Auteurs
+authors:
+  # Auteur organisation (utilisé par défaut)
+  organization:
+    id: ""                          # Identifiant unique (ex: "datashake")
+    name: ""                        # Nom affiché (ex: "datashake")
+    role_fr: ""                     # Rôle FR (ex: "Agence Data & IA")
+    role_en: ""                     # Rôle EN (ex: "Data & AI Agency")
+    bio_fr: ""                      # Bio FR (2-3 phrases)
+    bio_en: ""                      # Bio EN (2-3 phrases)
+
+  # Auteur personne (utilisé pour les articles ranking)
+  person:
+    id: ""                          # Identifiant unique (ex: "jean-dupont")
+    name: ""                        # Nom complet (ex: "Jean Dupont")
+    job_title_fr: ""                # Titre FR (ex: "Co-fondateur & CEO")
+    job_title_en: ""                # Titre EN (ex: "Co-founder & CEO")
+    role_fr: ""                     # Rôle descriptif FR
+    role_en: ""                     # Rôle descriptif EN
+    bio_fr: ""                      # Bio FR (2-3 phrases)
+    bio_en: ""                      # Bio EN (2-3 phrases)
+    linkedin_url: ""                # URL LinkedIn personnelle
+    expertise: []                   # Domaines d'expertise
+
+# Design
+design:
+  primary_color: "#0036CC"          # Couleur principale
+  secondary_color: "#2DB8DA"        # Couleur secondaire
+  accent_color: "#FF215B"           # Couleur d'accent
+  font_family: "Montserrat"        # Police Google Fonts
+  font_weights: "300;400;500;600;700;800;900"  # Graisses à charger
+
+# Langues
+languages:
+  primary: "fr"                     # Langue principale
+  secondary: "en"                   # Langue secondaire
+  # Laisser secondary vide pour un site monolingue
+
+# Contenu
+content:
+  categories: []                    # Catégories d'articles
+  # Exemple :
+  # categories:
+  #   - "SEO"
+  #   - "Marketing Digital"
+  #   - "Intelligence Artificielle"
+  #   - "Data"
+
+  clusters: []                      # Clusters thématiques pour articles ranking
+  # Exemple :
+  # clusters:
+  #   - name: "CMS"
+  #     articles:
+  #       - topic_fr: "Shopify"
+  #         slug_fr: "meilleures-agences-seo-shopify"
+  #         slug_en: "best-shopify-seo-agencies"
+  #       - topic_fr: "WordPress"
+  #         slug_fr: "meilleures-agences-seo-wordpress"
+  #         slug_en: "best-wordpress-seo-agencies"
+  #   - name: "Marketing"
+  #     articles:
+  #       - topic_fr: "Google Ads"
+  #         slug_fr: "meilleurs-outils-economies-google-ads"
+  #         slug_en: "best-google-ads-savings-tools"
+
+# Déploiement
+deployment:
+  platform: "github-pages"          # github-pages | vercel | netlify
+  github_user: ""                   # Username GitHub (ex: "monorg")
+  repo_name: ""                     # Nom du repo (ex: "ai.monsite.fr")
