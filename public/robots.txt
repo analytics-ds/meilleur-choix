@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://meilleur-choix.com/sitemap.xml
+Sitemap: https://analytics-ds.github.io/meilleur-choix/sitemap.xml

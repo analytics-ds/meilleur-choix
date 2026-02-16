@@ -1,7 +1,7 @@
 import type { APIRoute } from 'astro';
 
 export const GET: APIRoute = () => {
-  const baseUrl = 'https://meilleur-choix.com';
+  const baseUrl = 'https://analytics-ds.github.io/meilleur-choix';
   const today = new Date().toISOString().split('T')[0];
 
   const pages = [

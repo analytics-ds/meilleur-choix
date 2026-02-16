@@ -26,7 +26,7 @@ const {
 } = Astro.props;
 
 const lang = getLang(Astro.url);
-const baseUrl = `https://${siteConfig.brand.domain || 'meilleur-choix.com'}`;
+const baseUrl = import.meta.env.SITE || `https://${siteConfig.brand.domain}`;
 const currentUrl = `${baseUrl}${Astro.url.pathname}`;
 
 // Organization schema

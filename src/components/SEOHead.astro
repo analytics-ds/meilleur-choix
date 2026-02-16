@@ -27,7 +27,7 @@ const {
 const lang = getLang(Astro.url);
 const currentPath = Astro.url.pathname;
 const alternatePath = getAlternatePath(currentPath);
-const baseUrl = `https://${siteConfig.brand.domain || 'meilleur-choix.com'}`;
+const baseUrl = import.meta.env.SITE || `https://${siteConfig.brand.domain}`;
 const canonical = canonicalUrl || `${baseUrl}${currentPath}`;
 const alternateUrl = `${baseUrl}${alternatePath}`;
 const ogLocale = lang === 'fr' ? 'fr_FR' : 'en_US';
