@@ -1,0 +1,76 @@
+---
+import { siteConfig } from '@/config/site';
+import { getLang, t, getAlternatePath } from '@/utils/i18n';
+
+interface Props {
+  title: string;
+  description: string;
+  canonicalUrl?: string;
+  ogType?: 'website' | 'article';
+  ogImage?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  author?: string;
+}
+
+const {
+  title,
+  description,
+  canonicalUrl,
+  ogType = 'website',
+  ogImage,
+  publishedTime,
+  modifiedTime,
+  author,
+} = Astro.props;
+
+const lang = getLang(Astro.url);
+const currentPath = Astro.url.pathname;
+const alternatePath = getAlternatePath(currentPath);
+const baseUrl = `https://${siteConfig.brand.domain || 'meilleur-choix.com'}`;
+const canonical = canonicalUrl || `${baseUrl}${currentPath}`;
+const alternateUrl = `${baseUrl}${alternatePath}`;
+const ogLocale = lang === 'fr' ? 'fr_FR' : 'en_US';
+const ogLocaleAlt = lang === 'fr' ? 'en_US' : 'fr_FR';
+const hreflangMain = lang === 'fr' ? 'fr' : 'en';
+const hreflangAlt = lang === 'fr' ? 'en' : 'fr';
+---
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonical} />
+
+<!-- Hreflang -->
+<link rel="alternate" hreflang={hreflangMain} href={canonical} />
+<link rel="alternate" hreflang={hreflangAlt} href={alternateUrl} />
+<link rel="alternate" hreflang="x-default" href={`${baseUrl}/`} />
+
+<!-- Open Graph -->
+<meta property="og:type" content={ogType} />
+<meta property="og:url" content={canonical} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:site_name" content={siteConfig.brand.siteName} />
+<meta property="og:locale" content={ogLocale} />
+<meta property="og:locale:alternate" content={ogLocaleAlt} />
+{ogImage && <meta property="og:image" content={ogImage} />}
+
+<!-- Article meta -->
+{publishedTime && <meta property="article:published_time" content={publishedTime} />}
+{modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+{author && <meta name="author" content={author} />}
+
+<!-- Favicons -->
+<link rel="icon" href="/favicon.ico" sizes="48x48" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href={`https://fonts.googleapis.com/css2?family=${siteConfig.design.fontFamily}:wght@${siteConfig.design.fontWeights}&display=swap`}
+  rel="stylesheet"
+/>

@@ -1,0 +1,101 @@
+---
+import { siteConfig } from '@/config/site';
+import { getLang, t } from '@/utils/i18n';
+
+const lang = getLang(Astro.url);
+const currentYear = new Date().getFullYear();
+const blogPath = lang === 'en' ? '/en/blog/' : '/blog/';
+---
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a href={lang === 'en' ? '/en/' : '/'} class="footer-logo">
+        <svg class="logo-icon" width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="32" height="32" rx="8" fill="var(--color-primary)" />
+          <path d="M9 16L14 21L23 11" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <span>{siteConfig.brand.siteName}</span>
+      </a>
+      <p class="footer-tagline">{siteConfig.brand.tagline[lang]}</p>
+    </div>
+
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <a href={lang === 'en' ? '/en/' : '/'}>{t(lang, 'nav.home')}</a>
+      <a href={blogPath}>{t(lang, 'nav.blog')}</a>
+    </nav>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <p>&copy; {currentYear} {siteConfig.brand.siteName}. {t(lang, 'footer.rights')}</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background-color: var(--color-gray-900);
+    color: var(--color-gray-300);
+    margin-top: auto;
+  }
+
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: var(--spacing-3xl) var(--spacing-lg);
+    gap: var(--spacing-2xl);
+  }
+
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    color: var(--color-white);
+    text-decoration: none;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .footer-tagline {
+    font-size: var(--font-size-sm);
+    color: var(--color-gray-400);
+  }
+
+  .footer-nav {
+    display: flex;
+    gap: var(--spacing-lg);
+  }
+
+  .footer-nav a {
+    color: var(--color-gray-300);
+    text-decoration: none;
+    font-size: var(--font-size-sm);
+    transition: color var(--transition-fast);
+  }
+
+  .footer-nav a:hover {
+    color: var(--color-white);
+  }
+
+  .footer-bottom {
+    border-top: 1px solid var(--color-gray-800);
+    padding: var(--spacing-md) 0;
+  }
+
+  .footer-bottom p {
+    font-size: var(--font-size-xs);
+    color: var(--color-gray-500);
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .footer-inner {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+</style>

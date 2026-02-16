@@ -1,0 +1,195 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
+import FAQ from '@/components/FAQ.astro';
+import { getLang, t, formatDate, getBlogPath, getCategorySlug, getCategoryPath, getCategoryName } from '@/utils/i18n';
+import { authors } from '@/data/authors';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  entry: CollectionEntry<'blog'> | CollectionEntry<'blog-en'>;
+}
+
+const { entry } = Astro.props;
+const { title, description, date, author: authorId, category, tags, faq, updatedDate, image, imageAlt } = entry.data;
+const lang = getLang(Astro.url);
+
+const authorData = authors[authorId as keyof typeof authors];
+const authorName = authorData?.name ?? authorId;
+const authorRole = authorData ? authorData.role[lang] : '';
+
+const categorySlug = getCategorySlug(category);
+const breadcrumbs = [
+  { name: t(lang, 'breadcrumb.home'), url: lang === 'en' ? '/en/' : '/' },
+  { name: t(lang, 'breadcrumb.blog'), url: getBlogPath(lang) },
+  { name: title, url: Astro.url.pathname },
+];
+
+const publishedISO = date.toISOString();
+const modifiedISO = updatedDate ? updatedDate.toISOString() : publishedISO;
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  ogType="article"
+  ogImage={image}
+  publishedTime={publishedISO}
+  modifiedTime={modifiedISO}
+  author={authorName}
+  schemaType="article"
+  schemaAuthorId={authorId}
+  breadcrumbs={breadcrumbs}
+  faq={faq}
+>
+  <article class="article-page section">
+    <div class="container">
+      <div class="article-header">
+        <Breadcrumb items={breadcrumbs} />
+
+        <div class="article-meta">
+          <a href={getCategoryPath(categorySlug, lang)} class="article-category">
+            {category}
+          </a>
+          <span class="article-date">
+            {t(lang, 'article.publishedOn')} {formatDate(date, lang)}
+          </span>
+        </div>
+
+        <h1 class="article-title">{title}</h1>
+
+        <p class="article-description">{description}</p>
+
+        <div class="article-author">
+          <div class="author-info">
+            <span class="author-name">{authorName}</span>
+            {authorRole && <span class="author-role">{authorRole}</span>}
+          </div>
+        </div>
+      </div>
+
+      <div class="prose article-content">
+        <slot />
+      </div>
+
+      <div class="article-tags">
+        {tags.map((tag) => (
+          <span class="tag">{tag}</span>
+        ))}
+      </div>
+
+      {faq && faq.length > 0 && <FAQ items={faq} />}
+
+      <div class="article-back">
+        <a href={getBlogPath(lang)}>{t(lang, 'article.backToBlog')}</a>
+      </div>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .article-header {
+    max-width: var(--max-width-content);
+    margin-bottom: var(--spacing-2xl);
+  }
+
+  .article-meta {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .article-category {
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+
+  .article-category:hover {
+    text-decoration: underline;
+  }
+
+  .article-date {
+    font-size: var(--font-size-sm);
+    color: var(--color-gray-400);
+  }
+
+  .article-title {
+    font-size: var(--font-size-4xl);
+    font-weight: 800;
+    color: var(--color-gray-900);
+    line-height: 1.2;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .article-description {
+    font-size: var(--font-size-lg);
+    color: var(--color-gray-500);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .article-author {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--color-gray-200);
+  }
+
+  .author-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .author-name {
+    font-weight: 600;
+    color: var(--color-gray-800);
+    font-size: var(--font-size-sm);
+  }
+
+  .author-role {
+    font-size: var(--font-size-xs);
+    color: var(--color-gray-500);
+  }
+
+  .article-content {
+    max-width: var(--max-width-content);
+  }
+
+  .article-tags {
+    max-width: var(--max-width-content);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-2xl);
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid var(--color-gray-200);
+  }
+
+  .article-back {
+    max-width: var(--max-width-content);
+    margin-top: var(--spacing-2xl);
+  }
+
+  .article-back a {
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+
+  .article-back a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    .article-title {
+      font-size: var(--font-size-2xl);
+    }
+  }
+</style>
