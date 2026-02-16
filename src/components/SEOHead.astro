@@ -1,6 +1,6 @@
 ---
 import { siteConfig } from '@/config/site';
-import { getLang, t, getAlternatePath } from '@/utils/i18n';
+import { getLang, t, getAlternatePath, withBase, getHomePath } from '@/utils/i18n';
 
 interface Props {
   title: string;
@@ -45,7 +45,7 @@ const hreflangAlt = lang === 'fr' ? 'en' : 'fr';
 <!-- Hreflang -->
 <link rel="alternate" hreflang={hreflangMain} href={canonical} />
 <link rel="alternate" hreflang={hreflangAlt} href={alternateUrl} />
-<link rel="alternate" hreflang="x-default" href={`${baseUrl}/`} />
+<link rel="alternate" hreflang="x-default" href={`${baseUrl}${getHomePath('fr')}`} />
 
 <!-- Open Graph -->
 <meta property="og:type" content={ogType} />
@@ -63,9 +63,9 @@ const hreflangAlt = lang === 'fr' ? 'en' : 'fr';
 {author && <meta name="author" content={author} />}
 
 <!-- Favicons -->
-<link rel="icon" href="/favicon.ico" sizes="48x48" />
-<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="icon" href={withBase("/favicon.ico")} sizes="48x48" />
+<link rel="icon" href={withBase("/favicon.svg")} type="image/svg+xml" />
+<link rel="apple-touch-icon" href={withBase("/apple-touch-icon.png")} />
 
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />

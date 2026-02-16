@@ -1,16 +1,17 @@
 ---
 import { siteConfig } from '@/config/site';
-import { getLang, t } from '@/utils/i18n';
+import { getLang, t, getBlogPath, getHomePath } from '@/utils/i18n';
 
 const lang = getLang(Astro.url);
 const currentYear = new Date().getFullYear();
-const blogPath = lang === 'en' ? '/en/blog/' : '/blog/';
+const blogPath = getBlogPath(lang);
+const homePath = getHomePath(lang);
 ---
 
 <footer class="site-footer">
   <div class="container footer-inner">
     <div class="footer-brand">
-      <a href={lang === 'en' ? '/en/' : '/'} class="footer-logo">
+      <a href={homePath} class="footer-logo">
         <svg class="logo-icon" width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="32" height="32" rx="8" fill="var(--color-primary)" />
           <path d="M9 16L14 21L23 11" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
@@ -21,7 +22,7 @@ const blogPath = lang === 'en' ? '/en/blog/' : '/blog/';
     </div>
 
     <nav class="footer-nav" aria-label="Footer navigation">
-      <a href={lang === 'en' ? '/en/' : '/'}>{t(lang, 'nav.home')}</a>
+      <a href={homePath}>{t(lang, 'nav.home')}</a>
       <a href={blogPath}>{t(lang, 'nav.blog')}</a>
     </nav>
   </div>

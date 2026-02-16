@@ -1,5 +1,20 @@
 import type { Lang } from '@/config/site';
 
+// Base path from Astro config (e.g. '/meilleur-choix' or '')
+const base = (import.meta.env.BASE_URL ?? '/').replace(/\/$/, '');
+
+export function withBase(path: string): string {
+  if (!base || path.startsWith(base + '/') || path === base) return path;
+  return `${base}${path}`;
+}
+
+function stripBase(path: string): string {
+  if (base && path.startsWith(base)) {
+    return path.slice(base.length) || '/';
+  }
+  return path;
+}
+
 // Mapping des slugs FR → EN
 const slugMap: Record<string, string> = {
   // Ajouter les mappings ici au fur et à mesure
@@ -57,7 +72,8 @@ const categoryNames: Record<string, Record<Lang, string>> = {
 
 export function getLang(url: URL | string): Lang {
   const pathname = typeof url === 'string' ? url : url.pathname;
-  return pathname.startsWith('/en/') || pathname === '/en' ? 'en' : 'fr';
+  const clean = stripBase(pathname);
+  return clean.startsWith('/en/') || clean === '/en' ? 'en' : 'fr';
 }
 
 export function t(lang: Lang, key: string): string {
@@ -65,34 +81,32 @@ export function t(lang: Lang, key: string): string {
 }
 
 export function getAlternatePath(path: string): string {
-  if (path.startsWith('/en/')) {
+  const clean = stripBase(path);
+
+  if (clean.startsWith('/en/')) {
     // EN → FR
-    const frPath = path.replace('/en/', '/');
-    // Check blog slug mapping
+    const frPath = clean.replace('/en/', '/');
     const match = frPath.match(/^\/blog\/(.+?)\/$/);
     if (match && slugMapReverse[match[1]]) {
-      return `/blog/${slugMapReverse[match[1]]}/`;
+      return withBase(`/blog/${slugMapReverse[match[1]]}/`);
     }
-    // Check category mapping
     const catMatch = frPath.match(/^\/category\/(.+?)\/$/);
     if (catMatch && categoryMapReverse[catMatch[1]]) {
-      return `/categorie/${categoryMapReverse[catMatch[1]]}/`;
+      return withBase(`/categorie/${categoryMapReverse[catMatch[1]]}/`);
     }
-    return frPath.replace('/category/', '/categorie/');
+    return withBase(frPath.replace('/category/', '/categorie/'));
   } else {
     // FR → EN
-    const enPath = '/en' + path;
-    // Check blog slug mapping
-    const match = path.match(/^\/blog\/(.+?)\/$/);
+    const enPath = '/en' + clean;
+    const match = clean.match(/^\/blog\/(.+?)\/$/);
     if (match && slugMap[match[1]]) {
-      return `/en/blog/${slugMap[match[1]]}/`;
+      return withBase(`/en/blog/${slugMap[match[1]]}/`);
     }
-    // Check category mapping
-    const catMatch = path.match(/^\/categorie\/(.+?)\/$/);
+    const catMatch = clean.match(/^\/categorie\/(.+?)\/$/);
     if (catMatch && categoryMap[catMatch[1]]) {
-      return `/en/category/${categoryMap[catMatch[1]]}/`;
+      return withBase(`/en/category/${categoryMap[catMatch[1]]}/`);
     }
-    return enPath.replace('/categorie/', '/category/');
+    return withBase(enPath.replace('/categorie/', '/category/'));
   }
 }
 
@@ -130,15 +144,19 @@ export function getCategoryName(slug: string, lang: Lang): string {
 export function getCategoryPath(slug: string, lang: Lang): string {
   if (lang === 'en') {
     const enSlug = categoryMap[slug] ?? slug;
-    return `/en/category/${enSlug}/`;
+    return withBase(`/en/category/${enSlug}/`);
   }
-  return `/categorie/${slug}/`;
+  return withBase(`/categorie/${slug}/`);
 }
 
 export function getBlogPath(lang: Lang): string {
-  return lang === 'en' ? '/en/blog/' : '/blog/';
+  return withBase(lang === 'en' ? '/en/blog/' : '/blog/');
 }
 
 export function getArticlePath(slug: string, lang: Lang): string {
-  return lang === 'en' ? `/en/blog/${slug}/` : `/blog/${slug}/`;
+  return withBase(lang === 'en' ? `/en/blog/${slug}/` : `/blog/${slug}/`);
+}
+
+export function getHomePath(lang: Lang): string {
+  return withBase(lang === 'en' ? '/en/' : '/');
 }
