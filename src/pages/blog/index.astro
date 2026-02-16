@@ -1,0 +1,78 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ArticleCard from '@/components/ArticleCard.astro';
+import { getCollection } from 'astro:content';
+import { t } from '@/utils/i18n';
+
+const lang = 'fr';
+const allPosts = await getCollection('blog');
+const sortedPosts = allPosts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const title = `${t(lang, 'blog.title')} — Meilleur Choix`;
+const description = t(lang, 'blog.description');
+---
+
+<BaseLayout title={title} description={description}>
+  <section class="section">
+    <div class="container">
+      <h1 class="page-title">{t(lang, 'blog.title')}</h1>
+      <p class="page-description">{description}</p>
+
+      {sortedPosts.length > 0 ? (
+        <div class="articles-grid">
+          {sortedPosts.map((post) => (
+            <ArticleCard
+              title={post.data.title}
+              description={post.data.description}
+              date={post.data.date}
+              slug={post.slug}
+              category={post.data.category}
+              tags={post.data.tags}
+            />
+          ))}
+        </div>
+      ) : (
+        <p class="empty-state">Aucun article pour le moment. Revenez bientôt !</p>
+      )}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-title {
+    font-size: var(--font-size-4xl);
+    font-weight: 800;
+    color: var(--color-gray-900);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .page-description {
+    font-size: var(--font-size-lg);
+    color: var(--color-gray-500);
+    margin-bottom: var(--spacing-2xl);
+    max-width: var(--max-width-content);
+  }
+
+  .articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: var(--spacing-xl);
+  }
+
+  .empty-state {
+    text-align: center;
+    color: var(--color-gray-400);
+    font-size: var(--font-size-lg);
+    padding: var(--spacing-4xl) 0;
+  }
+
+  @media (max-width: 768px) {
+    .page-title {
+      font-size: var(--font-size-2xl);
+    }
+
+    .articles-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

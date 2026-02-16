@@ -1,0 +1,126 @@
+---
+import { siteConfig } from '@/config/site';
+import { authors } from '@/data/authors';
+import { getLang } from '@/utils/i18n';
+
+interface Props {
+  type: 'website' | 'article';
+  title?: string;
+  description?: string;
+  datePublished?: string;
+  dateModified?: string;
+  authorId?: string;
+  breadcrumbs?: Array<{ name: string; url: string }>;
+  faq?: Array<{ question: string; answer: string }>;
+}
+
+const {
+  type,
+  title,
+  description,
+  datePublished,
+  dateModified,
+  authorId,
+  breadcrumbs,
+  faq,
+} = Astro.props;
+
+const lang = getLang(Astro.url);
+const baseUrl = `https://${siteConfig.brand.domain || 'meilleur-choix.com'}`;
+const currentUrl = `${baseUrl}${Astro.url.pathname}`;
+
+// Organization schema
+const organizationSchema = {
+  '@type': 'Organization',
+  '@id': `${baseUrl}/#organization`,
+  name: siteConfig.brand.siteName,
+  url: baseUrl,
+  foundingDate: siteConfig.brand.foundingYear,
+  numberOfEmployees: {
+    '@type': 'QuantitativeValue',
+    value: siteConfig.brand.employeeRange,
+  },
+  knowsAbout: siteConfig.brand.expertise,
+};
+
+// WebSite schema
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: siteConfig.brand.siteName,
+  url: baseUrl,
+  publisher: { '@id': `${baseUrl}/#organization` },
+  inLanguage: lang === 'fr' ? 'fr-FR' : 'en-US',
+};
+
+// Article schema
+const authorData = authorId ? authors[authorId as keyof typeof authors] : null;
+const articleSchema = type === 'article' && title
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: title,
+      description: description,
+      datePublished: datePublished,
+      dateModified: dateModified || datePublished,
+      mainEntityOfPage: currentUrl,
+      author: authorData
+        ? authorData.type === 'person'
+          ? {
+              '@type': 'Person',
+              name: authorData.name,
+              jobTitle: 'jobTitle' in authorData ? authorData.jobTitle[lang] : undefined,
+              worksFor: { '@id': `${baseUrl}/#organization` },
+            }
+          : { '@id': `${baseUrl}/#organization` }
+        : { '@id': `${baseUrl}/#organization` },
+      publisher: {
+        '@type': 'Organization',
+        name: siteConfig.brand.siteName,
+        '@id': `${baseUrl}/#organization`,
+      },
+    }
+  : null;
+
+// Breadcrumb schema
+const breadcrumbSchema = breadcrumbs && breadcrumbs.length > 0
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: breadcrumbs.map((item, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: item.name,
+        item: item.url.startsWith('http') ? item.url : `${baseUrl}${item.url}`,
+      })),
+    }
+  : null;
+
+// FAQ schema
+const faqSchema = faq && faq.length > 0
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faq.map((item) => ({
+        '@type': 'Question',
+        name: item.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: item.answer,
+        },
+      })),
+    }
+  : null;
+
+const schemas = [
+  { '@context': 'https://schema.org', ...organizationSchema },
+  websiteSchema,
+  articleSchema,
+  breadcrumbSchema,
+  faqSchema,
+].filter(Boolean);
+---
+
+{schemas.map((schema) => (
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+))}

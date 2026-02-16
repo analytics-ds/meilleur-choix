@@ -1,0 +1,124 @@
+---
+import { getLang, t, formatDate, getArticlePath, getCategorySlug, getCategoryPath } from '@/utils/i18n';
+
+interface Props {
+  title: string;
+  description: string;
+  date: Date;
+  slug: string;
+  category: string;
+  tags: string[];
+}
+
+const { title, description, date, slug, category, tags } = Astro.props;
+const lang = getLang(Astro.url);
+const articleUrl = getArticlePath(slug, lang);
+const categorySlug = getCategorySlug(category);
+const categoryUrl = getCategoryPath(categorySlug, lang);
+---
+
+<article class="article-card">
+  <div class="card-content">
+    <div class="card-meta">
+      <a href={categoryUrl} class="card-category">{category}</a>
+      <time datetime={date.toISOString()}>{formatDate(date, lang)}</time>
+    </div>
+    <h3 class="card-title">
+      <a href={articleUrl}>{title}</a>
+    </h3>
+    <p class="card-description">{description}</p>
+    <div class="card-tags">
+      {tags.slice(0, 3).map((tag) => (
+        <span class="tag">{tag}</span>
+      ))}
+    </div>
+    <a href={articleUrl} class="card-link">
+      {t(lang, 'article.readMore')} &rarr;
+    </a>
+  </div>
+</article>
+
+<style>
+  .article-card {
+    background: var(--color-white);
+    border: 1px solid var(--color-gray-200);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: all var(--transition-base);
+  }
+
+  .article-card:hover {
+    border-color: var(--color-primary-light);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+
+  .card-content {
+    padding: var(--spacing-lg);
+  }
+
+  .card-meta {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+    font-size: var(--font-size-xs);
+  }
+
+  .card-category {
+    font-weight: 600;
+    color: var(--color-primary);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .card-meta time {
+    color: var(--color-gray-400);
+  }
+
+  .card-title {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .card-title a {
+    color: var(--color-gray-900);
+    text-decoration: none;
+  }
+
+  .card-title a:hover {
+    color: var(--color-primary);
+  }
+
+  .card-description {
+    font-size: var(--font-size-sm);
+    color: var(--color-gray-600);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .card-tags {
+    display: flex;
+    gap: var(--spacing-xs);
+    flex-wrap: wrap;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .card-link {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+
+  .card-link:hover {
+    text-decoration: underline;
+  }
+</style>

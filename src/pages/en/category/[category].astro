@@ -1,0 +1,116 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ArticleCard from '@/components/ArticleCard.astro';
+import { getCollection } from 'astro:content';
+import { siteConfig } from '@/config/site';
+import { t, getCategorySlug, getCategoryName } from '@/utils/i18n';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog-en');
+  const categories = [...new Set(posts.map((post) => post.data.category))];
+
+  const configCategories = siteConfig.categories;
+  const allCategorySlugs = new Set<string>();
+
+  categories.forEach((cat) => allCategorySlugs.add(getCategorySlug(cat)));
+  configCategories.forEach((cat) => allCategorySlugs.add(getCategorySlug(cat)));
+
+  // Map FR slugs to EN slugs
+  const categoryMap: Record<string, string> = {
+    'saas-logiciels': 'saas-software',
+    'hebergement-cloud': 'hosting-cloud',
+    'vpn-securite': 'vpn-security',
+  };
+
+  const enSlugs = new Set<string>();
+  allCategorySlugs.forEach((slug) => {
+    enSlugs.add(categoryMap[slug] || slug);
+  });
+
+  return [...enSlugs].map((slug) => ({
+    params: { category: slug },
+    props: { categorySlug: slug },
+  }));
+}
+
+interface Props {
+  categorySlug: string;
+}
+
+const { categorySlug } = Astro.props;
+const lang = 'en';
+const categoryName = getCategoryName(categorySlug, lang);
+
+const allPosts = await getCollection('blog-en');
+const filteredPosts = allPosts
+  .filter((post) => {
+    const postSlug = getCategorySlug(post.data.category);
+    const categoryMap: Record<string, string> = {
+      'saas-logiciels': 'saas-software',
+      'hebergement-cloud': 'hosting-cloud',
+      'vpn-securite': 'vpn-security',
+    };
+    return categoryMap[postSlug] === categorySlug || postSlug === categorySlug;
+  })
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const title = `${categoryName} — Meilleur Choix`;
+const description = `Discover our comparisons and guides in the ${categoryName} category.`;
+---
+
+<BaseLayout title={title} description={description}>
+  <section class="section">
+    <div class="container">
+      <h1 class="page-title">{t(lang, 'category.title')}: {categoryName}</h1>
+
+      {filteredPosts.length > 0 ? (
+        <div class="articles-grid">
+          {filteredPosts.map((post) => (
+            <ArticleCard
+              title={post.data.title}
+              description={post.data.description}
+              date={post.data.date}
+              slug={post.slug}
+              category={post.data.category}
+              tags={post.data.tags}
+            />
+          ))}
+        </div>
+      ) : (
+        <p class="empty-state">No articles in this category yet.</p>
+      )}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-title {
+    font-size: var(--font-size-4xl);
+    font-weight: 800;
+    color: var(--color-gray-900);
+    margin-bottom: var(--spacing-2xl);
+  }
+
+  .articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: var(--spacing-xl);
+  }
+
+  .empty-state {
+    text-align: center;
+    color: var(--color-gray-400);
+    font-size: var(--font-size-lg);
+    padding: var(--spacing-4xl) 0;
+  }
+
+  @media (max-width: 768px) {
+    .page-title {
+      font-size: var(--font-size-2xl);
+    }
+
+    .articles-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

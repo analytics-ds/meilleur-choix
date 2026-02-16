@@ -1,0 +1,180 @@
+---
+import { siteConfig } from '@/config/site';
+import { getLang, t, getAlternatePath } from '@/utils/i18n';
+
+const lang = getLang(Astro.url);
+const alternatePath = getAlternatePath(Astro.url.pathname);
+const blogPath = lang === 'en' ? '/en/blog/' : '/blog/';
+const currentPath = Astro.url.pathname;
+---
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href={lang === 'en' ? '/en/' : '/'} class="logo" aria-label={siteConfig.brand.siteName}>
+      <svg class="logo-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="32" height="32" rx="8" fill="var(--color-primary)" />
+        <path d="M9 16L14 21L23 11" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+      <span class="logo-text">{siteConfig.brand.siteName}</span>
+    </a>
+
+    <nav class="nav-desktop" aria-label="Navigation principale">
+      <a href={lang === 'en' ? '/en/' : '/'} class:list={['nav-link', { active: currentPath === '/' || currentPath === '/en/' }]}>
+        {t(lang, 'nav.home')}
+      </a>
+      <a href={blogPath} class:list={['nav-link', { active: currentPath.includes('/blog') }]}>
+        {t(lang, 'nav.blog')}
+      </a>
+    </nav>
+
+    <div class="header-actions">
+      <a href={alternatePath} class="lang-switch" aria-label={t(lang, 'lang.switchLabel')}>
+        {t(lang, 'lang.switch')}
+      </a>
+      <button class="menu-toggle" aria-label="Menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6" class="line-top" />
+          <line x1="3" y1="12" x2="21" y2="12" class="line-mid" />
+          <line x1="3" y1="18" x2="21" y2="18" class="line-bot" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <nav class="nav-mobile" aria-label="Navigation mobile">
+    <a href={lang === 'en' ? '/en/' : '/'} class="nav-link-mobile">
+      {t(lang, 'nav.home')}
+    </a>
+    <a href={blogPath} class="nav-link-mobile">
+      {t(lang, 'nav.blog')}
+    </a>
+  </nav>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--color-gray-200);
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--color-gray-900);
+    text-decoration: none;
+  }
+
+  .logo:hover {
+    color: var(--color-primary);
+  }
+
+  .nav-desktop {
+    display: flex;
+    gap: var(--spacing-xl);
+  }
+
+  .nav-link {
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--color-gray-600);
+    text-decoration: none;
+    padding: var(--spacing-xs) 0;
+    border-bottom: 2px solid transparent;
+    transition: all var(--transition-fast);
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    color: var(--color-primary);
+    border-bottom-color: var(--color-primary);
+  }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+  }
+
+  .lang-switch {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--color-primary);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border: 1px solid var(--color-primary);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    transition: all var(--transition-fast);
+  }
+
+  .lang-switch:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+  }
+
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-gray-700);
+    padding: var(--spacing-xs);
+  }
+
+  .nav-mobile {
+    display: none;
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-top: 1px solid var(--color-gray-200);
+    background-color: var(--color-white);
+  }
+
+  .nav-link-mobile {
+    display: block;
+    padding: var(--spacing-sm) 0;
+    font-size: var(--font-size-base);
+    color: var(--color-gray-700);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .nav-link-mobile:hover {
+    color: var(--color-primary);
+  }
+
+  @media (max-width: 768px) {
+    .nav-desktop {
+      display: none;
+    }
+
+    .menu-toggle {
+      display: block;
+    }
+
+    .nav-mobile.open {
+      display: block;
+    }
+  }
+</style>
+
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const mobileNav = document.querySelector('.nav-mobile');
+
+  toggle?.addEventListener('click', () => {
+    const isOpen = mobileNav?.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(isOpen));
+  });
+</script>

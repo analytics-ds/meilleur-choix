@@ -1,0 +1,176 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ArticleCard from '@/components/ArticleCard.astro';
+import { getCollection } from 'astro:content';
+import { siteConfig } from '@/config/site';
+import { t, getBlogPath } from '@/utils/i18n';
+
+const lang = 'en';
+const allPosts = await getCollection('blog-en');
+const latestPosts = allPosts
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 6);
+
+const title = `${siteConfig.brand.siteName} — ${siteConfig.brand.tagline.en}`;
+const description = 'Independent comparisons of software, hosting, and security solutions. Find the best tech solution for your needs.';
+---
+
+<BaseLayout title={title} description={description}>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="hero-title">
+        {t(lang, 'home.hero.title')}
+      </h1>
+      <p class="hero-subtitle">
+        {t(lang, 'home.hero.subtitle')}
+      </p>
+      <a href={getBlogPath(lang)} class="btn btn-primary">
+        {t(lang, 'home.viewAll')}
+      </a>
+    </div>
+  </section>
+
+  <!-- Latest articles -->
+  {latestPosts.length > 0 && (
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>{t(lang, 'home.latest')}</h2>
+          <a href={getBlogPath(lang)} class="see-all">{t(lang, 'home.viewAll')} &rarr;</a>
+        </div>
+        <div class="articles-grid">
+          {latestPosts.map((post) => (
+            <ArticleCard
+              title={post.data.title}
+              description={post.data.description}
+              date={post.data.date}
+              slug={post.slug}
+              category={post.data.category}
+              tags={post.data.tags}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Categories -->
+  <section class="section categories-section">
+    <div class="container">
+      <h2 class="section-title">{t(lang, 'nav.categories')}</h2>
+      <div class="categories-grid">
+        {siteConfig.categories.map((cat) => (
+          <div class="category-card">
+            <h3>{cat}</h3>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    background: linear-gradient(135deg, var(--color-gray-50), rgba(5, 150, 105, 0.05));
+    padding: var(--spacing-4xl) 0;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: var(--font-size-5xl);
+    font-weight: 800;
+    color: var(--color-gray-900);
+    line-height: 1.1;
+    margin-bottom: var(--spacing-lg);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-subtitle {
+    font-size: var(--font-size-lg);
+    color: var(--color-gray-500);
+    max-width: 600px;
+    margin: 0 auto var(--spacing-xl);
+    line-height: 1.6;
+  }
+
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .section-header h2 {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--color-gray-900);
+  }
+
+  .see-all {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+
+  .see-all:hover {
+    text-decoration: underline;
+  }
+
+  .articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: var(--spacing-xl);
+  }
+
+  .section-title {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--color-gray-900);
+    margin-bottom: var(--spacing-xl);
+    text-align: center;
+  }
+
+  .categories-section {
+    background-color: var(--color-gray-50);
+  }
+
+  .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+  }
+
+  .category-card {
+    background: var(--color-white);
+    border: 1px solid var(--color-gray-200);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+    text-align: center;
+    transition: all var(--transition-base);
+  }
+
+  .category-card:hover {
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-md);
+  }
+
+  .category-card h3 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--color-gray-800);
+  }
+
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: var(--font-size-3xl);
+    }
+
+    .articles-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
