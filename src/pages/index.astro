@@ -3,7 +3,7 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import ArticleCard from '@/components/ArticleCard.astro';
 import { getCollection } from 'astro:content';
 import { siteConfig } from '@/config/site';
-import { t, getBlogPath } from '@/utils/i18n';
+import { t, getBlogPath, getCategorySlug, getCategoryPath } from '@/utils/i18n';
 
 const lang = 'fr';
 const allPosts = await getCollection('blog');
@@ -61,9 +61,9 @@ const description = 'Comparatifs indépendants de logiciels, hébergeurs et solu
       <h2 class="section-title">{t(lang, 'nav.categories')}</h2>
       <div class="categories-grid">
         {siteConfig.categories.map((cat) => (
-          <div class="category-card">
+          <a href={getCategoryPath(getCategorySlug(cat), lang)} class="category-card">
             <h3>{cat}</h3>
-          </div>
+          </a>
         ))}
       </div>
     </div>
@@ -145,17 +145,20 @@ const description = 'Comparatifs indépendants de logiciels, hébergeurs et solu
   }
 
   .category-card {
+    display: block;
     background: var(--color-white);
     border: 1px solid var(--color-gray-200);
     border-radius: var(--radius-lg);
     padding: var(--spacing-xl);
     text-align: center;
+    text-decoration: none;
     transition: all var(--transition-base);
   }
 
   .category-card:hover {
     border-color: var(--color-primary);
     box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
   }
 
   .category-card h3 {
