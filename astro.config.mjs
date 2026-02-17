@@ -1,8 +1,8 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://analytics-ds.github.io',
-  base: '/meilleur-choix',
+  site: 'https://meilleur-classement.com',
+  base: '/',
   output: 'static',
   build: {
     format: 'directory',

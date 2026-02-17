@@ -28,7 +28,7 @@ const slugMapReverse: Record<string, string> = Object.fromEntries(
 
 // Traductions de l'interface
 const translations: Record<string, Record<Lang, string>> = {
-  'site.title': { fr: 'Meilleur Choix', en: 'Meilleur Choix' },
+  'site.title': { fr: 'Meilleur Classement', en: 'Meilleur Classement' },
   'site.tagline': { fr: 'Comparez, choisissez, avancez', en: 'Compare, choose, move forward' },
   'nav.home': { fr: 'Accueil', en: 'Home' },
   'nav.blog': { fr: 'Articles', en: 'Articles' },

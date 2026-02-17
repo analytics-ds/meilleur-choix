@@ -35,7 +35,7 @@ const filteredPosts = allPosts
   .filter((post) => getCategorySlug(post.data.category) === categorySlug)
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 
-const title = `${categoryName} — Meilleur Choix`;
+const title = `${categoryName} — Meilleur Classement`;
 const description = `Découvrez nos comparatifs et guides dans la catégorie ${categoryName}.`;
 ---
 

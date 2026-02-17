@@ -2,7 +2,7 @@ import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 
 export const GET: APIRoute = async () => {
-  const baseUrl = 'https://analytics-ds.github.io/meilleur-choix';
+  const baseUrl = 'https://meilleur-classement.com';
 
   const blogPosts = await getCollection('blog');
   const blogEnPosts = await getCollection('blog-en');

@@ -1,8 +1,8 @@
 export const siteConfig = {
   brand: {
     name: 'meilleur-choix',
-    siteName: 'Meilleur Choix',
-    domain: 'analytics-ds.github.io/meilleur-choix',
+    siteName: 'Meilleur Classement',
+    domain: 'meilleur-classement.com',
     parentUrl: '',
     tagline: {
       fr: 'Comparez, choisissez, avancez',
