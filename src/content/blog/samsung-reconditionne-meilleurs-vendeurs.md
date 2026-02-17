@@ -102,7 +102,7 @@ CertiDeal est un reconditionneur français qui propose des smartphones Samsung �
 | **Batterie vérifiée** | Oui (80%+) | Variable | Non garanti | Oui |
 | **SAV France** | Oui | Oui | Non | Oui |
 | **Certification éco** | B Corp | Non | Non | Non |
-| **Note Meilleur Choix** | ★★★★★ | ★★★★ | ★★★ | ★★★★ |
+| **Note Meilleur Classement** | ★★★★★ | ★★★★ | ★★★ | ★★★★ |
 
 ## Les modèles Samsung reconditionnés les plus populaires
 
