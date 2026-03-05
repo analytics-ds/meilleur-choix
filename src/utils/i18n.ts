@@ -32,7 +32,7 @@ const translations: Record<string, Record<Lang, string>> = {
   'site.tagline': { fr: 'Comparez, choisissez, avancez', en: 'Compare, choose, move forward' },
   'nav.home': { fr: 'Accueil', en: 'Home' },
   'nav.blog': { fr: 'Articles', en: 'Articles' },
-  'nav.categories': { fr: 'Catégories', en: 'Categories' },
+  'nav.categories': { fr: 'Nos classements', en: 'Our rankings' },
   'blog.title': { fr: 'Tous les articles', en: 'All articles' },
   'blog.description': { fr: 'Découvrez nos comparatifs et guides pour faire les meilleurs choix tech.', en: 'Discover our comparisons and guides to make the best tech choices.' },
   'article.publishedOn': { fr: 'Publié le', en: 'Published on' },
@@ -55,10 +55,10 @@ const translations: Record<string, Record<Lang, string>> = {
 
 // Mapping catégories FR → EN
 const categoryMap: Record<string, string> = {
-  'nos-classements-saas-logiciels': 'our-rankings-saas-software',
-  'nos-classements-hebergement-cloud': 'our-rankings-hosting-cloud',
-  'nos-classements-vpn-securite': 'our-rankings-vpn-security',
-  'nos-classements-mode': 'our-rankings-fashion',
+  'saas-logiciels': 'saas-software',
+  'hebergement-cloud': 'hosting-cloud',
+  'vpn-securite': 'vpn-security',
+  'mode': 'fashion',
 };
 
 const categoryMapReverse: Record<string, string> = Object.fromEntries(
@@ -66,10 +66,10 @@ const categoryMapReverse: Record<string, string> = Object.fromEntries(
 );
 
 const categoryNames: Record<string, Record<Lang, string>> = {
-  'nos-classements-saas-logiciels': { fr: 'Nos classements SaaS & Logiciels', en: 'Our rankings SaaS & Software' },
-  'nos-classements-hebergement-cloud': { fr: 'Nos classements Hébergement & Cloud', en: 'Our rankings Hosting & Cloud' },
-  'nos-classements-vpn-securite': { fr: 'Nos classements VPN & Sécurité', en: 'Our rankings VPN & Security' },
-  'nos-classements-mode': { fr: 'Nos classements mode', en: 'Our fashion rankings' },
+  'saas-logiciels': { fr: 'SaaS & Logiciels', en: 'SaaS & Software' },
+  'hebergement-cloud': { fr: 'Hébergement & Cloud', en: 'Hosting & Cloud' },
+  'vpn-securite': { fr: 'VPN & Sécurité', en: 'VPN & Security' },
+  'mode': { fr: 'Mode', en: 'Fashion' },
 };
 
 export function getLang(url: URL | string): Lang {

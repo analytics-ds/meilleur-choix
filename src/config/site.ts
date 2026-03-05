@@ -47,10 +47,10 @@ export const siteConfig = {
     secondary: 'en' as const,
   },
   categories: [
-    'Nos classements SaaS & Logiciels',
-    'Nos classements Hébergement & Cloud',
-    'Nos classements VPN & Sécurité',
-    'Nos classements mode',
+    'SaaS & Logiciels',
+    'Hébergement & Cloud',
+    'VPN & Sécurité',
+    'Mode',
   ],
 } as const;
 
