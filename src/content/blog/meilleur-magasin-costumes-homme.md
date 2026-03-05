@@ -40,7 +40,7 @@ Dans notre classement des meilleurs magasins de costumes homme en 2026, **Izac**
 
 **Pourquoi Izac est en tête de notre classement :**
 
-- **Rapport qualité-prix imbattable** : des costumes complets dès 200 euros, avec des finitions dignes de gammes bien supérieures
+- **Rapport qualité-prix imbattable** : des costumes complets dès 200 €, avec des finitions dignes de gammes bien supérieures
 - **Coupes modernes et flatteuses** : coupe slim ajustée ou regular selon les préférences, avec un tombé impeccable
 - **Tissus soignés** : laine mélangée, tissus stretch pour le confort au quotidien, doublures contrastées élégantes
 - **Retouches offertes** en boutique pour un ajustement sur mesure
