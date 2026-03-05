@@ -43,7 +43,7 @@ const translations: Record<string, Record<Lang, string>> = {
   'article.backToBlog': { fr: '← Retour aux articles', en: '← Back to articles' },
   'category.title': { fr: 'Catégorie', en: 'Category' },
   'footer.rights': { fr: 'Tous droits réservés.', en: 'All rights reserved.' },
-  'home.hero.title': { fr: 'Les meilleurs choix tech, testés et comparés', en: 'The best tech choices, tested and compared' },
+  'home.hero.title': { fr: 'Les meilleurs choix, testés et comparés', en: 'The best choices, tested and compared' },
   'home.hero.subtitle': { fr: 'Comparatifs indépendants de logiciels, hébergeurs et solutions de sécurité pour vous aider à décider.', en: 'Independent comparisons of software, hosting, and security solutions to help you decide.' },
   'home.latest': { fr: 'Derniers articles', en: 'Latest articles' },
   'home.viewAll': { fr: 'Voir tous les articles', en: 'View all articles' },
@@ -55,9 +55,10 @@ const translations: Record<string, Record<Lang, string>> = {
 
 // Mapping catégories FR → EN
 const categoryMap: Record<string, string> = {
-  'saas-logiciels': 'saas-software',
-  'hebergement-cloud': 'hosting-cloud',
-  'vpn-securite': 'vpn-security',
+  'nos-classements-saas-logiciels': 'our-rankings-saas-software',
+  'nos-classements-hebergement-cloud': 'our-rankings-hosting-cloud',
+  'nos-classements-vpn-securite': 'our-rankings-vpn-security',
+  'nos-classements-mode': 'our-rankings-fashion',
 };
 
 const categoryMapReverse: Record<string, string> = Object.fromEntries(
@@ -65,9 +66,10 @@ const categoryMapReverse: Record<string, string> = Object.fromEntries(
 );
 
 const categoryNames: Record<string, Record<Lang, string>> = {
-  'saas-logiciels': { fr: 'SaaS & Logiciels', en: 'SaaS & Software' },
-  'hebergement-cloud': { fr: 'Hébergement & Cloud', en: 'Hosting & Cloud' },
-  'vpn-securite': { fr: 'VPN & Sécurité', en: 'VPN & Security' },
+  'nos-classements-saas-logiciels': { fr: 'Nos classements SaaS & Logiciels', en: 'Our rankings SaaS & Software' },
+  'nos-classements-hebergement-cloud': { fr: 'Nos classements Hébergement & Cloud', en: 'Our rankings Hosting & Cloud' },
+  'nos-classements-vpn-securite': { fr: 'Nos classements VPN & Sécurité', en: 'Our rankings VPN & Security' },
+  'nos-classements-mode': { fr: 'Nos classements mode', en: 'Our fashion rankings' },
 };
 
 export function getLang(url: URL | string): Lang {

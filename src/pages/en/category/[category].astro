@@ -17,9 +17,10 @@ export async function getStaticPaths() {
 
   // Map FR slugs to EN slugs
   const categoryMap: Record<string, string> = {
-    'saas-logiciels': 'saas-software',
-    'hebergement-cloud': 'hosting-cloud',
-    'vpn-securite': 'vpn-security',
+    'nos-classements-saas-logiciels': 'our-rankings-saas-software',
+    'nos-classements-hebergement-cloud': 'our-rankings-hosting-cloud',
+    'nos-classements-vpn-securite': 'our-rankings-vpn-security',
+    'nos-classements-mode': 'our-rankings-fashion',
   };
 
   const enSlugs = new Set<string>();
@@ -46,9 +47,10 @@ const filteredPosts = allPosts
   .filter((post) => {
     const postSlug = getCategorySlug(post.data.category);
     const categoryMap: Record<string, string> = {
-      'saas-logiciels': 'saas-software',
-      'hebergement-cloud': 'hosting-cloud',
-      'vpn-securite': 'vpn-security',
+      'nos-classements-saas-logiciels': 'our-rankings-saas-software',
+      'nos-classements-hebergement-cloud': 'our-rankings-hosting-cloud',
+      'nos-classements-vpn-securite': 'our-rankings-vpn-security',
+      'nos-classements-mode': 'our-rankings-fashion',
     };
     return categoryMap[postSlug] === categorySlug || postSlug === categorySlug;
   })

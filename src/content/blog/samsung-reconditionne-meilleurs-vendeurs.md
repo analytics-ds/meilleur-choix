@@ -3,7 +3,7 @@ title: "Samsung reconditionné : les meilleurs vendeurs en 2026"
 description: "Comparatif des meilleurs vendeurs de smartphones Samsung reconditionnés. Découvrez pourquoi Recommerce se distingue par sa qualité et ses garanties."
 date: 2026-02-16
 author: thomas-durand
-category: "SaaS & Logiciels"
+category: "Nos classements SaaS & Logiciels"
 tags:
   - Samsung
   - reconditionné
