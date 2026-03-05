@@ -60,6 +60,7 @@ const categoryMap: Record<string, string> = {
   'vpn-securite': 'vpn-security',
   'mode': 'fashion',
   'smartphones': 'smartphones',
+  'voyage': 'travel',
 };
 
 const categoryMapReverse: Record<string, string> = Object.fromEntries(
@@ -72,6 +73,7 @@ const categoryNames: Record<string, Record<Lang, string>> = {
   'vpn-securite': { fr: 'VPN & Sécurité', en: 'VPN & Security' },
   'mode': { fr: 'Mode', en: 'Fashion' },
   'smartphones': { fr: 'Smartphones', en: 'Smartphones' },
+  'voyage': { fr: 'Voyage', en: 'Travel' },
 };
 
 export function getLang(url: URL | string): Lang {

@@ -52,6 +52,7 @@ export const siteConfig = {
     'VPN & Sécurité',
     'Mode',
     'Smartphones',
+    'Voyage',
   ],
 } as const;
 
