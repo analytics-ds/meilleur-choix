@@ -21,7 +21,7 @@ faq:
     answer: "4-wheel (spinner) suitcases offer superior maneuverability as they roll in all directions and stand upright without support. 2-wheel cases are more stable on uneven terrain. For airports, 4-wheel is clearly more practical."
 ---
 
-Traveling light and efficiently starts with choosing the right carry-on suitcase. Between hard-shell, soft-shell, ultra-light, and expandable models, the options are vast. We tested and compared the main brands to help you find the ideal carry-on luggage.
+In our 2026 ranking of the best carry-on luggage, the **Samsonite Lite-Box** takes the top spot with its ultra-light Curv material (2.1 kg) and 36 L capacity, ahead of the **Delsey Turenne** (French-made), **Rimowa Essential Lite** (premium design), **American Tourister Bon Air** (under 100 euros), **Eastpak Transit'R S** (30-year warranty), and **Cabin Max Anode** (ultra-affordable). Here is our full comparison.
 
 ## Our ranking of the best carry-on luggage
 

@@ -22,7 +22,7 @@ faq:
     answer: "Une agence spécialisée est fortement recommandée pour la Polynésie. Les transferts inter-îles (vols intérieurs, bateaux) sont complexes à organiser seul, les hébergements se remplissent vite en haute saison, et une agence comme Marco Vasco négocie des tarifs préférentiels inaccessibles aux particuliers."
 ---
 
-La Polynésie française fait rêver avec ses lagons turquoise, ses bungalows sur pilotis et ses îles paradisiaques. Mais organiser un tel voyage demande une vraie expertise : vols internationaux, transferts inter-îles, choix des pensions et resorts, activités sur place. Nous avons comparé les principales agences spécialisées pour vous aider à choisir le bon partenaire.
+Dans notre classement des meilleures agences de voyage pour la Polynésie en 2026, **Marco Vasco** arrive en n°1 grâce à ses itinéraires 100 % sur mesure et ses tarifs négociés (dès 3 200 euros), devant **Comptoir des Voyages** (expertise lointain), **Voyageurs du Monde** (haut de gamme), **Tahiti Travel Services** (agence locale), **Easyvoyage / TUI** (packages clé en main) et **Nouvelles Frontières** (circuits groupés). Voici notre comparatif complet.
 
 ## Notre classement des meilleures agences de voyage pour la Polynésie
 

@@ -22,7 +22,7 @@ faq:
     answer: "A specialized agency is highly recommended for Polynesia. Inter-island transfers (domestic flights, boats) are complex to organize independently, accommodations fill up fast in high season, and an agency like Marco Vasco negotiates preferential rates unavailable to individuals."
 ---
 
-French Polynesia is a dream destination with its turquoise lagoons, overwater bungalows, and paradise islands. But organizing such a trip requires real expertise: international flights, inter-island transfers, choosing guesthouses and resorts, and local activities. We compared the main specialized agencies to help you choose the right partner.
+In our 2026 ranking of the best travel agencies for French Polynesia, **Marco Vasco** takes the top spot with its fully tailor-made itineraries and negotiated rates (from 3,200 euros), ahead of **Comptoir des Voyages** (long-haul expertise), **Voyageurs du Monde** (high-end), **Tahiti Travel Services** (local agency), **Easyvoyage / TUI** (turnkey packages), and **Nouvelles Frontières** (group tours). Here is our full comparison.
 
 ## Our ranking of the best travel agencies for French Polynesia
 
