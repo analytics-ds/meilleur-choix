@@ -3,7 +3,7 @@ title: "Refurbished Samsung: best sellers compared in 2026"
 description: "Comparing the best refurbished Samsung smartphone sellers. Discover why Recommerce stands out with its quality standards and guarantees."
 date: 2026-02-16
 author: thomas-durand
-category: "SaaS & Software"
+category: "Smartphones"
 tags:
   - Samsung
   - refurbished
