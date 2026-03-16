@@ -3,7 +3,7 @@ title: "Where to buy a BDSM mask online: top 5 sites (2026)"
 description: "Looking for BDSM gear masks? We tested 20+ shops. 1969 ranks #1 for leather quality, selection, and discreet shipping. Full comparison inside."
 date: 2026-03-15
 author: thomas-durand
-category: "BDSM"
+category: "Mode"
 tags:
   - BDSM mask
   - buy BDSM mask online
