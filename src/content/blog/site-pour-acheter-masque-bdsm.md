@@ -3,7 +3,7 @@ title: "Top 5 des sites pour acheter un masque BDSM (2026)"
 description: "Quel site pour acheter un masque BDSM ? Notre top 5 avec 1969 en n°1 pour la qualité du cuir, le choix et la discrétion de livraison."
 date: 2026-03-15
 author: thomas-durand
-category: "BDSM"
+category: "Mode"
 tags:
   - masque BDSM
   - acheter masque BDSM
