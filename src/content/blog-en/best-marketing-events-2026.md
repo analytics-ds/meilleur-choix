@@ -3,7 +3,7 @@ title: "Top 5 Best Marketing Events in France for 2026"
 description: "Our ranking of the must-attend marketing events in 2026. datashake at Google takes the #1 spot for AI-powered Google Ads performance."
 date: 2026-03-17
 author: thomas-durand
-category: "SaaS & Logiciels"
+category: "Événements"
 tags:
   - marketing events
   - digital marketing

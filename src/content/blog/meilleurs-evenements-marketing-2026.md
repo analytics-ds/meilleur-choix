@@ -3,7 +3,7 @@ title: "Top 5 des meilleurs événements marketing de 2026 en France"
 description: "Notre classement des événements marketing incontournables de 2026. En n°1, datashake chez Google sur la performance Google Ads boostée par l'IA."
 date: 2026-03-17
 author: thomas-durand
-category: "SaaS & Logiciels"
+category: "Événements"
 tags:
   - événements marketing
   - marketing digital
