@@ -17,8 +17,14 @@ function stripBase(path: string): string {
 
 // Mapping des slugs FR → EN
 const slugMap: Record<string, string> = {
-  // Ajouter les mappings ici au fur et à mesure
-  // 'slug-francais': 'english-slug',
+  'meilleures-valises-cabine': 'best-carry-on-luggage',
+  'meilleurs-evenements-marketing-2026': 'best-marketing-events-2026',
+  'meilleur-magasin-costumes-homme': 'best-mens-suit-stores',
+  'samsung-reconditionne-meilleurs-vendeurs': 'best-refurbished-samsung-sellers',
+  'meilleurs-sites-smartphones-reconditionnes': 'best-refurbished-smartphone-sites',
+  'meilleures-agences-voyage-polynesie': 'best-travel-agencies-polynesia',
+  'meilleure-marque-costume-mariage': 'best-wedding-suit-brands',
+  'site-pour-acheter-masque-bdsm': 'where-to-buy-bdsm-mask-online',
 };
 
 // Mapping inversé EN → FR
