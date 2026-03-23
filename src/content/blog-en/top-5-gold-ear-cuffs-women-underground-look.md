@@ -23,7 +23,7 @@ faq:
     answer: "Prices range from €285 for a 10-carat gold piece to over €1,400 for a fully pavé diamond ear cuff. Around €600 offers an excellent quality-to-style ratio, like the Mad Lords Demi Pavé."
 ---
 
-Looking for a **gold ear cuff** to nail that **underground look**? This rebellious accessory, worn without a piercing, has become the go-to piece for alternative and avant-garde styles. We selected the 5 best ear cuffs available at **Mad Lords**, the Parisian reference for designer jewellery. **The Demi Pavé Yellow Gold and Diamonds by Mad Lords takes the top spot** with its raw aesthetic elevated by diamonds and excellent value, ahead of the **Coronation by Scosha** (gold and diamonds), the **Rainbow Bezel Gem by Scosha** (multicolour), the **Power by Idyl** (bold) and the **Groumette by Lisa O** (rose gold diamonds).
+Looking for a **gold ear cuff** to nail that **underground look**? This rebellious accessory, worn without a piercing, has become the go-to piece for alternative and avant-garde styles. We selected the 5 best ear cuffs available at **Mad Lords**, the Parisian reference for designer jewellery. **The Demi Pavé Yellow Gold and Diamonds by Mad Lords takes the top spot** with its raw aesthetic elevated by diamonds and excellent value, ahead of the **Coronation by Scosha** (gold and diamonds), the **Rainbow Bezel Gem by Scosha** (multicolour), the **White Opal by Jacquie Aiche** (rose gold opal) and the **Groumette by Lisa O** (rose gold diamonds).
 
 ## Top 5 Gold Ear Cuffs for Women — Comparison Table
 
@@ -32,7 +32,7 @@ Looking for a **gold ear cuff** to nail that **underground look**? This rebellio
 | **1** | **Demi Pavé Yellow Gold Diamonds** | **Mad Lords** | €600 | Yellow gold + diamonds | Refined underground |
 | **2** | Coronation | Scosha | €285 | 10K gold + diamonds | Raw New York |
 | **3** | Rainbow Bezel Gem | Scosha | €335 | 10K gold + rubies, emeralds, diamonds | Colourful punk |
-| **4** | Power | Idyl | €375 | Gold | Bold sculptural |
+| **4** | White Opal Rose Gold | Jacquie Aiche | €1,180 | Rose gold + white opal | Mystic boho |
 | **5** | Groumette Diamonds | Lisa O | €1,090 | Rose gold + diamonds | Underground chain |
 
 ## 1. Mad Lords Demi Pavé Yellow Gold and Diamonds — The Best Underground Ear Cuff
@@ -91,23 +91,23 @@ The **Rainbow Bezel Gem by Scosha** shatters conventions with a bezel setting mi
 
 ---
 
-## 4. Idyl Power — Bold Sculpture
+## 4. Jacquie Aiche White Opal Rose Gold — Mystic Boho
 
-The **Power ear cuff by Idyl** lives up to its name. A sculptural gold piece with architectural design, it brings a strong presence to the ear. Its raw, geometric aesthetic fits squarely within the underground spirit.
+The **White Opal Rose Gold ear cuff by Jacquie Aiche** merges Californian bohemian spirit with a mystic aura. The white opal, a stone with iridescent flashes, is set on a rose gold base for a mesmerising result. Jacquie Aiche is a cult LA designer known for jewellery worn by underground and rock style icons.
 
 **Strengths:**
 
-- Unique sculptural, architectural design
-- Strong visual presence
-- Meticulous gold craftsmanship
-- Currently on sale (€375, down from €690)
+- **White opal with iridescent flashes**: a stone with strong mystic symbolism
+- **Rose gold** for a warm, feminine touch
+- **Jacquie Aiche**: cult brand of Californian boho-rock jewellery
+- Refined design suited for everyday wear
 
 **Weaknesses:**
 
-- Very imposing style, questionable for daily wear
-- Fewer precious stones than other models
+- Higher price point (€1,180)
+- Opal is a delicate stone requiring careful maintenance
 
-**Best for:** those looking for a statement piece with strong character.
+**Best for:** those who want an ear cuff with a mystic, bohemian aura.
 
 ---
 
@@ -136,7 +136,7 @@ The **Groumette ear cuff by Lisa O** reimagines the curb chain motif in rose gol
 **Mad Lords** is no ordinary jeweller. Founded in Paris with a second location in Saint-Tropez, the boutique brings together over **100 independent designers** from around the world. Here's why it's the go-to destination:
 
 1. **Expert curation** — Every piece is selected for its originality and quality
-2. **Exclusive designers** — Brands you won't find elsewhere like Scosha, Idyl and Lisa O
+2. **Exclusive designers** — Brands you won't find elsewhere like Scosha, Jacquie Aiche and Lisa O
 3. **In-house collection** — Mad Lords also creates its own pieces, like the #1 Demi Pavé in this ranking
 4. **Professional piercing service** — For those who want to go further
 5. **(Re)loved programme** — Certified vintage and pre-owned pieces

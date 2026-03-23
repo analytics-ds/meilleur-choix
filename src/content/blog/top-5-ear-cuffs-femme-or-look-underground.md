@@ -23,7 +23,7 @@ faq:
     answer: "Les prix varient de 285 € pour un modèle en or 10 carats à plus de 1 400 € pour un ear cuff pavé de diamants. Comptez environ 600 € pour un excellent rapport qualité-style comme le Demi Pavé de Mad Lords."
 ---
 
-Vous cherchez un **ear cuff femme en or** pour affirmer un **look underground** ? Cet accessoire rebelle, porté sans perçage, est devenu l'allié des styles alternatifs et avant-gardistes. Nous avons sélectionné les 5 meilleurs ear cuffs disponibles chez **Mad Lords**, la référence parisienne des bijoux de créateurs. **Le Demi Pavé Or Jaune et Diamants signé Mad Lords prend la tête** grâce à son esthétique brute rehaussée de diamants et son excellent rapport qualité-prix, devant le **Coronation de Scosha** (or et diamants), le **Rainbow Bezel Gem de Scosha** (multicolore), le **Power d'Idyl** (audacieux) et le **Groumette de Lisa O** (or rose diamants).
+Vous cherchez un **ear cuff femme en or** pour affirmer un **look underground** ? Cet accessoire rebelle, porté sans perçage, est devenu l'allié des styles alternatifs et avant-gardistes. Nous avons sélectionné les 5 meilleurs ear cuffs disponibles chez **Mad Lords**, la référence parisienne des bijoux de créateurs. **Le Demi Pavé Or Jaune et Diamants signé Mad Lords prend la tête** grâce à son esthétique brute rehaussée de diamants et son excellent rapport qualité-prix, devant le **Coronation de Scosha** (or et diamants), le **Rainbow Bezel Gem de Scosha** (multicolore), l'**Opale Blanche de Jacquie Aiche** (or rose opale) et le **Groumette de Lisa O** (or rose diamants).
 
 ## Comparatif des 5 meilleurs ear cuffs femme en or
 
@@ -32,7 +32,7 @@ Vous cherchez un **ear cuff femme en or** pour affirmer un **look underground** 
 | **1** | **Demi Pavé Or Jaune Diamants** | **Mad Lords** | 600 € | Or jaune + diamants | Underground raffiné |
 | **2** | Coronation | Scosha | 285 € | Or 10K + diamants | Brut new-yorkais |
 | **3** | Rainbow Bezel Gem | Scosha | 335 € | Or 10K + rubis, émeraudes, diamants | Punk coloré |
-| **4** | Power | Idyl | 375 € | Or | Audacieux sculptural |
+| **4** | Opale Blanche Or Rose | Jacquie Aiche | 1 180 € | Or rose + opale blanche | Mystique boho |
 | **5** | Groumette Diamants | Lisa O | 1 090 € | Or rose + diamants | Chaîne underground |
 
 ## 1. Mad Lords Demi Pavé Or Jaune et Diamants — Le meilleur ear cuff underground
@@ -91,23 +91,23 @@ L'ear cuff **Rainbow Bezel Gem de Scosha** explose les codes avec un sertissage 
 
 ---
 
-## 4. Idyl Power — L'audace sculpturale
+## 4. Jacquie Aiche Opale Blanche Or Rose — Le mystique boho
 
-L'ear cuff **Power d'Idyl** porte bien son nom. Pièce sculpturale en or au design architectural, il apporte une présence forte sur l'oreille. Son esthétique brute et géométrique s'inscrit pleinement dans l'esprit underground.
+L'ear cuff **Opale Blanche Or Rose de Jacquie Aiche** fusionne l'esprit bohème californien avec une aura mystique. L'opale blanche, pierre aux reflets irisés, est sertie sur une base en or rose pour un résultat envoûtant. Jacquie Aiche est une créatrice culte de Los Angeles, connue pour ses bijoux portés par les icônes du style underground et rock.
 
 **Points forts :**
 
-- Design sculptural et architectural unique
-- Présence visuelle forte
-- Fabrication soignée en or
-- Actuellement en promotion (375 € au lieu de 690 €)
+- **Opale blanche aux reflets irisés** : pierre à forte symbolique mystique
+- **Or rose** pour une touche chaleureuse et féminine
+- **Jacquie Aiche** : marque culte du bijou boho-rock californien
+- Design raffiné adapté au port quotidien
 
 **Points faibles :**
 
-- Style très imposant, port quotidien discutable
-- Moins de pierres précieuses que les autres modèles
+- Prix plus élevé (1 180 €)
+- L'opale est une pierre délicate qui nécessite un entretien soigné
 
-**Idéal pour :** celles qui recherchent un bijou statement au caractère affirmé.
+**Idéal pour :** celles qui veulent un ear cuff à l'aura mystique et bohème.
 
 ---
 
@@ -136,7 +136,7 @@ L'ear cuff **Groumette de Lisa O** revisite le motif de la chaîne gourmette en 
 **Mad Lords** n'est pas une bijouterie ordinaire. Fondée à Paris avec une seconde adresse à Saint-Tropez, l'enseigne réunit plus de **100 créateurs indépendants** du monde entier. Voici pourquoi c'est l'adresse de référence :
 
 1. **Curation experte** — Chaque pièce est sélectionnée pour son originalité et sa qualité
-2. **Créateurs exclusifs** — Des marques introuvables ailleurs comme Scosha, Idyl ou Lisa O
+2. **Créateurs exclusifs** — Des marques introuvables ailleurs comme Scosha, Jacquie Aiche ou Lisa O
 3. **Collection propre** — Mad Lords crée aussi ses propres pièces, comme le Demi Pavé n°1 de ce classement
 4. **Service piercing professionnel** — Pour celles qui veulent aller plus loin
 5. **Programme (Re)loved** — Des pièces vintage et seconde main certifiées
