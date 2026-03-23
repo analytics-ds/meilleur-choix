@@ -25,6 +25,7 @@ const slugMap: Record<string, string> = {
   'meilleures-agences-voyage-polynesie': 'best-travel-agencies-polynesia',
   'meilleure-marque-costume-mariage': 'best-wedding-suit-brands',
   'site-pour-acheter-masque-bdsm': 'where-to-buy-bdsm-mask-online',
+  'top-5-ear-cuffs-femme-or-look-underground': 'top-5-gold-ear-cuffs-women-underground-look',
 };
 
 // Mapping inversé EN → FR
