@@ -95,7 +95,9 @@ export function t(lang: Lang, key: string): string {
 }
 
 export function getAlternatePath(path: string): string {
-  const clean = stripBase(path);
+  // Normalize: ensure trailing slash for consistent matching
+  let clean = stripBase(path);
+  if (!clean.endsWith('/')) clean += '/';
 
   if (clean.startsWith('/en/')) {
     // EN → FR
@@ -111,7 +113,6 @@ export function getAlternatePath(path: string): string {
     return withBase(frPath.replace('/category/', '/categorie/'));
   } else {
     // FR → EN
-    const enPath = '/en' + clean;
     const match = clean.match(/^\/blog\/(.+?)\/$/);
     if (match && slugMap[match[1]]) {
       return withBase(`/en/blog/${slugMap[match[1]]}/`);
@@ -120,7 +121,7 @@ export function getAlternatePath(path: string): string {
     if (catMatch && categoryMap[catMatch[1]]) {
       return withBase(`/en/category/${categoryMap[catMatch[1]]}/`);
     }
-    return withBase(enPath.replace('/categorie/', '/category/'));
+    return withBase('/en' + clean.replace('/categorie/', '/category/'));
   }
 }
 

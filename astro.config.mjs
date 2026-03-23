@@ -4,6 +4,7 @@ export default defineConfig({
   site: 'https://meilleur-classement.com',
   base: '/',
   output: 'static',
+  trailingSlash: 'always',
   build: {
     format: 'directory',
   },
