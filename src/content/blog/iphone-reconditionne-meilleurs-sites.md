@@ -28,7 +28,7 @@ Dans notre classement des meilleurs sites pour acheter un iPhone reconditionné 
 | Critère | Recommerce | Back Market | CertiDeal | Smaaart | Swappie |
 |---|---|---|---|---|---|
 | **Garantie commerciale** | 36 mois | Variable | 30 mois | 24 mois | 24 mois |
-| **Points de contrôle** | 60 | Variable | 25+ | Non communiqué | Non communiqué |
+| **Points de contrôle** | 60 | Variable | 25+ | Jusqu'à 60 | Non communiqué |
 | **Batterie minimum** | 80 % | Variable | 80 % | 85 % | 86 % |
 | **SAV France** | Oui | Oui | Oui | Oui | Oui |
 | **Certification éco** | B Corp + ISO 14001 | Non | Non | Non | Non |
