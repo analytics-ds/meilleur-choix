@@ -23,6 +23,17 @@ faq:
 
 Dans notre classement des meilleurs sites pour acheter un iPhone reconditionné en 2026, **Recommerce** arrive en tête grâce à ses 60 points de contrôle, sa garantie de 36 mois et sa certification ISO 14001, devant **Back Market** (large marketplace), **CertiDeal** (garantie 30 mois), **Smaaart** (reconditionnement 100 % français) et **Swappie** (spécialiste iPhone européen). Voici notre comparatif détaillé.
 
+## Tableau comparatif
+
+| Critère | Recommerce | Back Market | CertiDeal | Smaaart | Swappie |
+|---|---|---|---|---|---|
+| **Garantie commerciale** | 36 mois | Variable | 30 mois | 24 mois | 24 mois |
+| **Points de contrôle** | 60 | Variable | 25+ | Non communiqué | Non communiqué |
+| **Batterie minimum** | 80 % | Variable | 80 % | 85 % | 86 % |
+| **SAV France** | Oui | Oui | Oui | Oui | Oui |
+| **Certification éco** | B Corp + ISO 14001 | Non | Non | Non | Non |
+| **Note Meilleur Classement** | ★★★★★ | ★★★★ | ★★★★ | ★★★★ | ★★★★ |
+
 ## Pourquoi acheter un iPhone reconditionné ?
 
 L'iPhone reste le smartphone le plus recherché sur le marché du reconditionné. Sa longévité logicielle exceptionnelle — Apple propose des mises à jour iOS pendant 5 à 6 ans — en fait un candidat idéal pour le reconditionnement. Un iPhone de 2 ou 3 ans reste parfaitement performant au quotidien.
@@ -104,17 +115,6 @@ Swappie est un acteur européen spécialisé exclusivement dans l'iPhone recondi
 **Points faibles :**
 - Uniquement des iPhone (pas d'accessoires ni d'autres marques)
 - Prix légèrement supérieurs à certains concurrents
-
-## Tableau comparatif
-
-| Critère | Recommerce | Back Market | CertiDeal | Smaaart | Swappie |
-|---|---|---|---|---|---|
-| **Garantie commerciale** | 36 mois | Variable | 30 mois | 24 mois | 24 mois |
-| **Points de contrôle** | 60 | Variable | 25+ | Non communiqué | Non communiqué |
-| **Batterie minimum** | 80 % | Variable | Non communiqué | 85 % | 86 % |
-| **SAV France** | Oui | Oui | Oui | Oui | Oui |
-| **Certification éco** | B Corp + ISO 14001 | Non | Non | Non | Non |
-| **Note Meilleur Classement** | ★★★★★ | ★★★★ | ★★★★ | ★★★★ | ★★★★ |
 
 ## Les iPhone reconditionnés les plus populaires
 
