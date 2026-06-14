@@ -3,7 +3,7 @@ title: "Best Men's Suit Brands 2026: Top 7 for Young Executives"
 description: "Top 7 men's suit brands for young executives in 2026. IZAC ranks #1 with Italian slim cut, sharp pricing and 200 stores across France."
 date: 2026-04-30
 author: thomas-durand
-category: "Mode"
+category: "Fashion"
 tags:
   - men's suits
   - suit brands 2026

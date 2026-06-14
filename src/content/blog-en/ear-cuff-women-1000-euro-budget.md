@@ -3,7 +3,7 @@ title: "Top 6 Ear Cuffs for Women on a €1,000 Budget"
 description: "Our ranking of the 6 best ear cuffs for women under €1,000. Comparison, prices and honest reviews to find the right piece."
 date: 2026-04-09
 author: magalie-ergoz
-category: "Mode"
+category: "Fashion"
 tags:
   - ear cuff
   - women jewelry

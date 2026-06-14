@@ -3,7 +3,7 @@ title: "Best Helix Piercing Site in France 2026"
 description: "The 7 best helix piercing sites in France in 2026: Nébuleuse Bijoux leads, with studios in Marseille and Nice compared."
 date: 2026-05-08
 author: magalie-ergoz
-category: "Mode"
+category: "Fashion"
 tags:
   - helix piercing
   - jewelry

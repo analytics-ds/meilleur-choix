@@ -3,7 +3,7 @@ title: "Nickel-Free Ear Piercings: 7 Best Titanium & Niobium Shops"
 description: "Allergic to nickel? 2026 ranking of the 7 best online shops for nickel-free titanium and niobium ear piercings, with Nébuleuse Bijoux on top."
 date: 2026-05-15
 author: magalie-ergoz
-category: "Mode"
+category: "Fashion"
 tags:
   - nickel-free piercing
   - nickel allergy

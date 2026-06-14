@@ -3,7 +3,7 @@ title: "What sex toy to gift your partner for her birthday?"
 description: "Top 5 sex toys to gift in 2026: strap-on-me Multi-Orgasm S, Lelo Sona 2 Cruise, Womanizer Premium 2, We-Vibe Chorus, Satisfyer Pro 2."
 date: 2026-04-22
 author: magalie-ergoz
-category: "Bien-être"
+category: "Wellness"
 tags:
   - sex toy gift
   - partner birthday

@@ -117,6 +117,11 @@ const categoryMap: Record<string, string> = {
   'evenements': 'events',
   'services': 'services',
   'beaute': 'beauty',
+  'bien-etre': 'wellness',
+  'immobilier': 'real-estate',
+  // Note: 'finance' is intentionally NOT mapped. There is no EN finance article
+  // nor an EN finance category page, so the FR finance page must not advertise
+  // an EN hreflang alternate (which would 404).
 };
 
 const categoryMapReverse: Record<string, string> = Object.fromEntries(
@@ -133,6 +138,9 @@ const categoryNames: Record<string, Record<Lang, string>> = {
   'evenements': { fr: 'Événements', en: 'Events' },
   'services': { fr: 'Services', en: 'Services' },
   'beaute': { fr: 'Beauté', en: 'Beauty' },
+  'bien-etre': { fr: 'Bien-être', en: 'Wellness' },
+  'immobilier': { fr: 'Immobilier', en: 'Real Estate' },
+  'finance': { fr: 'Finance', en: 'Finance' },
 };
 
 export function getLang(url: URL | string): Lang {
@@ -159,8 +167,11 @@ export function getAlternatePath(path: string): string | null {
       return slugMapReverse[match[1]] ? withBase(`/blog/${slugMapReverse[match[1]]}/`) : null;
     }
     const catMatch = frPath.match(/^\/category\/(.+?)\/$/);
-    if (catMatch && categoryMapReverse[catMatch[1]]) {
-      return withBase(`/categorie/${categoryMapReverse[catMatch[1]]}/`);
+    if (catMatch) {
+      // Catégorie EN sans mapping FR → pas d'alternate (évite les hreflang 404)
+      return categoryMapReverse[catMatch[1]]
+        ? withBase(`/categorie/${categoryMapReverse[catMatch[1]]}/`)
+        : null;
     }
     return withBase(frPath.replace('/category/', '/categorie/'));
   } else {
@@ -171,8 +182,11 @@ export function getAlternatePath(path: string): string | null {
       return slugMap[match[1]] ? withBase(`/en/blog/${slugMap[match[1]]}/`) : null;
     }
     const catMatch = clean.match(/^\/categorie\/(.+?)\/$/);
-    if (catMatch && categoryMap[catMatch[1]]) {
-      return withBase(`/en/category/${categoryMap[catMatch[1]]}/`);
+    if (catMatch) {
+      // Catégorie FR sans mapping EN → pas d'alternate (évite les hreflang 404)
+      return categoryMap[catMatch[1]]
+        ? withBase(`/en/category/${categoryMap[catMatch[1]]}/`)
+        : null;
     }
     return withBase('/en' + clean.replace('/categorie/', '/category/'));
   }
@@ -206,7 +220,19 @@ export function getCategorySlug(categoryName: string): string {
 }
 
 export function getCategoryName(slug: string, lang: Lang): string {
-  return categoryNames[slug]?.[lang] ?? slug;
+  // slug may be a FR slug (key of categoryNames) or an EN slug (value of categoryMap)
+  const frSlug = categoryNames[slug] ? slug : categoryMapReverse[slug];
+  return (frSlug && categoryNames[frSlug]?.[lang]) ?? slug;
+}
+
+// Convert a FR category slug to its EN slug (centralized mapping)
+export function toEnCategorySlug(frSlug: string): string {
+  return categoryMap[frSlug] ?? frSlug;
+}
+
+// Convert an EN category slug back to its FR slug (centralized mapping)
+export function toFrCategorySlug(enSlug: string): string {
+  return categoryMapReverse[enSlug] ?? enSlug;
 }
 
 export function getCategoryPath(slug: string, lang: Lang): string {

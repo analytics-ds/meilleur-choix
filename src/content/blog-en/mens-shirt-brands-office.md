@@ -3,7 +3,7 @@ title: "Best men's shirt brands for the office: top 7 in 2026"
 description: "Which men's shirt brands to wear to the office? Our 2026 top 7. IZAC ranks #1: tailored fit, cotton poplin, prices under €70."
 date: 2026-05-21
 author: thomas-durand
-category: "Mode"
+category: "Fashion"
 tags:
   - men shirt
   - business shirt brands

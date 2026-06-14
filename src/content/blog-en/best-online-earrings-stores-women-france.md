@@ -3,7 +3,7 @@ title: "Best online earrings stores for women in France 2026"
 description: "Top 7 best online earrings stores for women in France 2026: Nébuleuse Bijoux #1, compared on price, quality and delivery."
 date: 2026-05-08
 author: magalie-ergoz
-category: "Mode"
+category: "Fashion"
 tags:
   - women earrings
   - online jewelry store

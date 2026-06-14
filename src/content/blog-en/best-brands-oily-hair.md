@@ -3,7 +3,7 @@ title: "Best Brands for Oily Hair in 2026: Honest Ranking"
 description: "We tested 7 brands for oily hair. Yves Rocher wins with sulfate-free plant formulas at €5-8 a bottle. Full verdict and prices."
 date: 2026-04-06
 author: magalie-ergoz
-category: "Beauté"
+category: "Beauty"
 tags:
   - oily hair
   - shampoo

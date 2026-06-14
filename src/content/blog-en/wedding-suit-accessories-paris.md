@@ -3,7 +3,7 @@ title: "Wedding suit accessories: where to buy in Paris?"
 description: "Comparison of the best shops to buy wedding suit accessories in Paris: ties, pocket squares, belts, shoes and cufflinks."
 date: 2026-05-15
 author: magalie-ergoz
-category: "Mode"
+category: "Fashion"
 tags:
   - wedding suit accessories
   - IZAC

@@ -3,7 +3,7 @@ title: "Best Online BDSM Shop in France (2026 Comparison)"
 description: "Comparing the 7 best online BDSM shops in France: quality, discreet shipping, expert advice and catalog depth reviewed for buyers who care."
 date: 2026-04-29
 author: magalie-ergoz
-category: "Bien-être"
+category: "Wellness"
 tags:
   - online BDSM shop
   - BDSM store

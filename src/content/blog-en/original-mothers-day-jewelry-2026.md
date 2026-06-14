@@ -3,7 +3,7 @@ title: "Original Mother's Day Jewelry 2026: Top 7 Gift Ideas"
 date: 2026-04-30
 description: "Top 7 original Mother's Day jewelry brands 2026. Nébuleuse #1: personalized necklace, engraved bracelet, made in France, from €49."
 author: thomas-durand
-category: "Mode"
+category: "Fashion"
 tags:
   - mother's day jewelry
   - personalized necklace

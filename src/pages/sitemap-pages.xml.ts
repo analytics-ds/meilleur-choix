@@ -1,30 +1,9 @@
 import type { APIRoute } from 'astro';
+import { getCollection } from 'astro:content';
 import { siteConfig } from '@/config/site';
+import { getCategorySlug, toEnCategorySlug } from '@/utils/i18n';
 
-// Build category slug from display name (same logic as getCategorySlug in i18n.ts)
-function toSlug(name: string): string {
-  return name
-    .toLowerCase()
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .replace(/&/g, '')
-    .replace(/\s+/g, '-')
-    .replace(/-+/g, '-')
-    .replace(/^-|-$/g, '');
-}
-
-const categoryMap: Record<string, string> = {
-  'saas-logiciels': 'saas-software',
-  'hebergement-cloud': 'hosting-cloud',
-  'vpn-securite': 'vpn-security',
-  'mode': 'fashion',
-  'smartphones': 'smartphones',
-  'voyage': 'travel',
-  'evenements': 'events',
-  'services': 'services',
-};
-
-export const GET: APIRoute = () => {
+export const GET: APIRoute = async () => {
   const baseUrl = `https://${siteConfig.brand.domain}`;
 
   const pages: Array<{ url: string; priority: string; changefreq: string }> = [
@@ -36,11 +15,25 @@ export const GET: APIRoute = () => {
     { url: '/en/sitemap/', priority: '0.6', changefreq: 'weekly' },
   ];
 
-  // Add all category pages (FR + EN)
-  for (const cat of siteConfig.categories) {
-    const frSlug = toSlug(cat);
-    const enSlug = categoryMap[frSlug] ?? frSlug;
+  const frPosts = await getCollection('blog');
+  const enPosts = await getCollection('blog-en');
+
+  // FR category pages = config categories + categories used by FR articles
+  // (mirrors getStaticPaths in src/pages/categorie/[categorie].astro)
+  const frSlugs = new Set<string>();
+  siteConfig.categories.forEach((cat) => frSlugs.add(getCategorySlug(cat)));
+  frPosts.forEach((post) => frSlugs.add(getCategorySlug(post.data.category)));
+
+  // EN category pages = config categories (mapped) + categories used by EN articles
+  // (mirrors getStaticPaths in src/pages/en/category/[category].astro)
+  const enSlugs = new Set<string>();
+  siteConfig.categories.forEach((cat) => enSlugs.add(toEnCategorySlug(getCategorySlug(cat))));
+  enPosts.forEach((post) => enSlugs.add(toEnCategorySlug(getCategorySlug(post.data.category))));
+
+  for (const frSlug of frSlugs) {
     pages.push({ url: `/categorie/${frSlug}/`, priority: '0.7', changefreq: 'monthly' });
+  }
+  for (const enSlug of enSlugs) {
     pages.push({ url: `/en/category/${enSlug}/`, priority: '0.7', changefreq: 'monthly' });
   }
 

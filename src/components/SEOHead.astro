@@ -53,12 +53,12 @@ const ogImage = ogImageRaw
 <meta name="description" content={description} />
 <link rel="canonical" href={canonical} />
 
-<!-- Hreflang -->
+<!-- Hreflang (x-default always points to the FR canonical version) -->
 {alternateUrl && (
   <>
     <link rel="alternate" hreflang={hreflangMain} href={canonical} />
     <link rel="alternate" hreflang={hreflangAlt} href={alternateUrl} />
-    <link rel="alternate" hreflang="x-default" href={canonical} />
+    <link rel="alternate" hreflang="x-default" href={lang === 'fr' ? canonical : alternateUrl} />
   </>
 )}
 

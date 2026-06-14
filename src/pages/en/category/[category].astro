@@ -3,7 +3,7 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import ArticleCard from '@/components/ArticleCard.astro';
 import { getCollection } from 'astro:content';
 import { siteConfig } from '@/config/site';
-import { t, getCategorySlug, getCategoryName } from '@/utils/i18n';
+import { t, getCategorySlug, getCategoryName, toEnCategorySlug } from '@/utils/i18n';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog-en');
@@ -15,20 +15,10 @@ export async function getStaticPaths() {
   categories.forEach((cat) => allCategorySlugs.add(getCategorySlug(cat)));
   configCategories.forEach((cat) => allCategorySlugs.add(getCategorySlug(cat)));
 
-  // Map FR slugs to EN slugs
-  const categoryMap: Record<string, string> = {
-    'saas-logiciels': 'saas-software',
-    'hebergement-cloud': 'hosting-cloud',
-    'vpn-securite': 'vpn-security',
-    'mode': 'fashion',
-    'smartphones': 'smartphones',
-    'voyage': 'travel',
-    'evenements': 'events',
-  };
-
+  // Map FR slugs to EN slugs via the centralized mapping
   const enSlugs = new Set<string>();
   allCategorySlugs.forEach((slug) => {
-    enSlugs.add(categoryMap[slug] || slug);
+    enSlugs.add(toEnCategorySlug(slug));
   });
 
   return [...enSlugs].map((slug) => ({
@@ -47,18 +37,7 @@ const categoryName = getCategoryName(categorySlug, lang);
 
 const allPosts = await getCollection('blog-en');
 const filteredPosts = allPosts
-  .filter((post) => {
-    const postSlug = getCategorySlug(post.data.category);
-    const categoryMap: Record<string, string> = {
-      'saas-logiciels': 'saas-software',
-      'hebergement-cloud': 'hosting-cloud',
-      'vpn-securite': 'vpn-security',
-      'mode': 'fashion',
-      'voyage': 'travel',
-      'evenements': 'events',
-    };
-    return categoryMap[postSlug] === categorySlug || postSlug === categorySlug;
-  })
+  .filter((post) => toEnCategorySlug(getCategorySlug(post.data.category)) === categorySlug)
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 
 const title = `${categoryName} — Meilleur Classement`;
