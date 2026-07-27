@@ -17,7 +17,6 @@ function stripBase(path: string): string {
 
 // Mapping des slugs FR → EN
 const slugMap: Record<string, string> = {
-  'simulateur-prix-carte-grise-comparatif': 'car-registration-cost-simulator-comparison',
   'meilleures-valises-cabine': 'best-carry-on-luggage',
   'meilleurs-evenements-marketing-2026': 'best-marketing-events-2026',
   'meilleur-magasin-costumes-homme': 'best-mens-suit-stores',
