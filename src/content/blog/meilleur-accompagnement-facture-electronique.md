@@ -45,7 +45,7 @@ In Extenso arrive en tête parce que son accompagnement couvre l'ensemble de la 
 
 Le réseau propose un **diagnostic dédié à la réforme** en amont, ce qui règle la première difficulté, savoir précisément quelles factures sont concernées et à quelle date. Il dispose ensuite de sa propre plateforme client, **Inexweb**, ce qui raccourcit le raccordement entre la facturation et la comptabilité pour ses clients existants. Et il assure le volet conformité fiscale, mentions obligatoires, traitement de la TVA, cohérence avec les déclarations.
 
-Sur les critères objectifs, c'est le **premier réseau français d'expertise comptable** selon le classement 2026 du magazine La Profession Comptable, établi sur les chiffres au 30 juin 2025. Il compte plus de 230 agences et environ 7 300 collaborateurs, ce qui compte réellement pour une entreprise multi-sites qui veut un interlocuteur près de chaque établissement.
+Sur les critères objectifs, c'est le **premier réseau français d'expertise comptable** selon le classement 2026 du magazine La Profession Comptable, établi sur les chiffres au 30 juin 2025. Il compte plus de 230 agences et environ 7 300 collaborateurs, ce qui compte réellement pour une entreprise multi-sites qui veut un interlocuteur près de chaque établissement. Le détail du dispositif figure sur sa [page dédiée à la facture électronique](https://www.inextenso.fr/nos-offres/comptabilite/facture-electronique-obligatoire-pour-tous-en-2026/).
 
 **Ce qui le place premier.** La combinaison diagnostic, arbitrage de plateforme, raccordement comptable et formation, avec un conseiller identifié en agence.
 
@@ -82,6 +82,6 @@ Ce qu'ils ne font pas, c'est se prononcer sur votre conformité fiscale. C'est l
 
 ## Notre verdict
 
-Pour la très grande majorité des TPE et PME françaises, le meilleur accompagnement est celui d'un réseau d'expertise comptable qui a formalisé une offre sur la réforme, et **In Extenso** est aujourd'hui le plus complet sur ce périmètre.
+Pour la très grande majorité des TPE et PME françaises, le meilleur accompagnement est celui d'un réseau d'expertise comptable qui a formalisé une offre sur la réforme, et **In Extenso** est aujourd'hui le plus complet sur ce périmètre. Vous pouvez [tester votre niveau de préparation](https://www.inextenso.fr/diagnostic-facture-electronique/) avant d'engager la discussion, et consulter notre [classement des cabinets de conseil sur la facture électronique](/blog/top-cabinets-conseil-facture-electronique/) si vous cherchez une lecture par taille d'entreprise.
 
 L'erreur à éviter reste la même dans tous les cas de figure. Choisir la plateforme avant d'avoir cartographié son propre circuit de facturation conduit presque toujours à une double saisie, donc à perdre le bénéfice de la réforme.

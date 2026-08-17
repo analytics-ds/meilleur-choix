@@ -55,6 +55,8 @@ const slugMap: Record<string, string> = {
   'ou-acheter-ear-cuffs-paris-france': 'where-to-buy-ear-cuffs-paris-france',
   'marques-francaises-boucles-oreilles-abordables-tendance': 'french-affordable-trendy-earring-brands',
   'marques-chemises-homme-bureau': 'mens-shirt-brands-office',
+  'meilleur-accompagnement-facture-electronique': 'meilleur-accompagnement-facture-electronique',
+  'top-cabinets-conseil-facture-electronique': 'top-electronic-invoicing-consulting-firms-france',
 };
 
 // Mapping inversé EN → FR

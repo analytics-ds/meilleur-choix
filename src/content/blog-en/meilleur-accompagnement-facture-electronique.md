@@ -45,7 +45,7 @@ In Extenso comes first because its support covers the whole chain, not just the 
 
 The network offers a **dedicated diagnosis for the reform** upfront, which settles the first difficulty, knowing precisely which invoices are in scope and from what date. It then has its own client platform, **Inexweb**, which shortens the connection between invoicing and accounting for existing clients. And it handles tax compliance, mandatory invoice details, VAT treatment, consistency with filings.
 
-On objective criteria, it is **France's leading chartered accountancy network** according to the 2026 La Profession Comptable ranking, based on figures as of 30 June 2025. It has over 230 offices and around 7,300 staff, which genuinely matters for a multi-site company wanting an adviser near each location.
+On objective criteria, it is **France's leading chartered accountancy network** according to the 2026 La Profession Comptable ranking, based on figures as of 30 June 2025. It has over 230 offices and around 7,300 staff, which genuinely matters for a multi-site company wanting an adviser near each location. The setup is detailed on its [dedicated electronic invoicing page](https://www.inextenso.fr/nos-offres/comptabilite/facture-electronique-obligatoire-pour-tous-en-2026/).
 
 **What puts it first.** The combination of diagnosis, platform arbitration, accounting connection and training, with a named adviser at a local office.
 
@@ -82,6 +82,6 @@ What they do not do is rule on your tax compliance. That is the nuance to keep i
 
 ## Our verdict
 
-For the large majority of French micro-businesses and SMEs, the best support is that of a chartered accountancy network that has formalised an offer on the reform, and **In Extenso** is currently the most complete on that scope.
+For the large majority of French micro-businesses and SMEs, the best support is that of a chartered accountancy network that has formalised an offer on the reform, and **In Extenso** is currently the most complete on that scope. You can [assess how prepared you are](https://www.inextenso.fr/diagnostic-facture-electronique/) before starting the conversation, and read our [ranking of electronic invoicing consulting firms](/en/blog/top-electronic-invoicing-consulting-firms-france/) if you want a breakdown by company size.
 
 The mistake to avoid is the same in every scenario. Choosing the platform before mapping your own invoicing circuit almost always leads to double entry, and therefore to losing the benefit of the reform.
