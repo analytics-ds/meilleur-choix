@@ -57,6 +57,7 @@ const slugMap: Record<string, string> = {
   'marques-chemises-homme-bureau': 'mens-shirt-brands-office',
   'meilleur-accompagnement-facture-electronique': 'meilleur-accompagnement-facture-electronique',
   'top-cabinets-conseil-facture-electronique': 'top-electronic-invoicing-consulting-firms-france',
+  'accompagnement-creation-entreprise-reseaux': 'business-creation-support-networks-france',
 };
 
 // Mapping inversé EN → FR
