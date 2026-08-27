@@ -59,6 +59,7 @@ const slugMap: Record<string, string> = {
   'top-cabinets-conseil-facture-electronique': 'top-electronic-invoicing-consulting-firms-france',
   'accompagnement-creation-entreprise-reseaux': 'business-creation-support-networks-france',
   'meilleurs-sites-collier-femme-tendance': 'best-websites-trendy-womens-necklaces',
+  'meilleurs-sites-chaussures-createur-femme': 'best-websites-designer-shoes-women',
 };
 
 // Mapping inversé EN → FR
