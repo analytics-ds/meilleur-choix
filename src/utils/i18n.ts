@@ -43,6 +43,7 @@ const slugMap: Record<string, string> = {
   'piercing-oreille-sans-nickel-titane-niobium': 'nickel-free-ear-piercing-titanium-niobium',
   'acheter-costume-croise-homme-en-ligne': 'buy-double-breasted-suit-online',
   'alternatives-elevo-comparatif-pme': 'elevo-alternatives-sme-comparison',
+  'meilleurs-tableaux-de-bord-territoriaux': 'best-territorial-dashboards',
   'meilleurs-promoteurs-immobiliers-seine-et-marne': 'best-real-estate-developers-seine-et-marne',
   'meilleurs-promoteurs-immobiliers-hauts-de-seine': 'best-real-estate-developers-hauts-de-seine',
   'meilleurs-spas-luxe-paris': 'best-luxury-spas-paris',
